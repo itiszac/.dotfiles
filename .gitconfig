@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = absencelul@gmail.com
+	name = Zachary Meyer
+[core]
+	editor = nvim
