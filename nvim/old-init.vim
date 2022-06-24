@@ -6,7 +6,6 @@ call plug#begin('~/.local/share/nvim/site/autoload')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'kassio/neoterm'
   Plug 'tpope/vim-commentary'
-  Plug 'sbdchd/neoformat'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-fugitive'
@@ -36,10 +35,6 @@ let g:neoterm_autoinsert = 1
 nnoremap <c-q> :Ttoggle<CR>
 inoremap <c-q> <Esc>:Ttoggle<CR>
 tnoremap <c-q> <c-\><c-n>:Ttoggle<CR>
-
-" sbdchd/neoformat
-nnoremap <leader>F :Neoformat prettier<CR>
-nnoremap <leader>D :Neoformat gofmt<CR>
 
 " itchyny/lightline.vim and itchyny/vim-gitbranch
 let g:lightline = {
