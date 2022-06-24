@@ -34,6 +34,7 @@ return packer.startup({function(use)
   use("wbthomason/packer.nvim")
   use("nvim-lua/popup.nvim")
   use("nvim-lua/plenary.nvim")
+  use("EdenEast/nightfox.nvim")
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
