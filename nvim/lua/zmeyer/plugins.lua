@@ -30,11 +30,32 @@ end
 
 -- Startup
 return packer.startup({function(use)
-  -- Plugins
   use("wbthomason/packer.nvim")
+
+  -- Dependencies
   use("nvim-lua/popup.nvim")
   use("nvim-lua/plenary.nvim")
+
+  -- Colorscheme
   use("EdenEast/nightfox.nvim")
+
+  -- Completion
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/cmp-path")
+  use("hrsh7th/cmp-cmdline")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-nvim-lua")
+  use("saadparwaiz1/cmp_luasnip")
+  use("onsails/lspkind-nvim")
+
+  -- Snippets
+  use("L3MON4D3/LuaSnip")
+  use("rafamadriz/friendly-snippets")
+
+  -- Lsp
+  use("neovim/nvim-lspconfig")
+  use("williamboman/nvim-lsp-installer")
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

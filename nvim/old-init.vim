@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
-  Plug 'tomasiser/vim-code-dark'
   Plug 'pangloss/vim-javascript'
   Plug 'itchyny/lightline.vim'
   Plug 'itchyny/vim-gitbranch'
@@ -42,9 +41,6 @@ tnoremap <c-q> <c-\><c-n>:Ttoggle<CR>
 nnoremap <leader>F :Neoformat prettier<CR>
 nnoremap <leader>D :Neoformat gofmt<CR>
 
-" tomasiser/vim-code-dark
-colorscheme codedark
-
 " itchyny/lightline.vim and itchyny/vim-gitbranch
 let g:lightline = {
       \ 'active': {
@@ -73,7 +69,7 @@ nnoremap <leader>gg :G<CR>
 
 
 " coc
-" 
+"
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
