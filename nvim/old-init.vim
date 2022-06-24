@@ -16,27 +16,6 @@ call plug#begin('~/.local/share/nvim/site/autoload')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" defaults
-set encoding=utf-8
-set completeopt=menuone,noinsert,noselect
-set mouse=a
-set splitright
-set splitbelow
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set number
-set ignorecase
-set smartcase
-set incsearch
-set diffopt+=vertical
-set hidden
-set nobackup
-set nowritebackup
-set cmdheight=2
-set shortmess+=c
-set signcolumn=yes
-set updatetime=300
 filetype plugin indent on
 let mapleader = " "
 if (has("termguicolors"))
