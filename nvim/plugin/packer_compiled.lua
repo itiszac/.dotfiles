@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/absence/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/absence/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/absence/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/absence/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/home/absence/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,

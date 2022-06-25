@@ -32,9 +32,10 @@ end
 return packer.startup({function(use)
   use("wbthomason/packer.nvim")
 
-  -- Dependencies
+  -- Random
   use("nvim-lua/popup.nvim")
   use("nvim-lua/plenary.nvim")
+  use("windwp/nvim-autopairs")
 
   -- Colorscheme
   use("EdenEast/nightfox.nvim")
@@ -63,6 +64,7 @@ return packer.startup({function(use)
 
   -- Treesitter
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+  use("nvim-treesitter/playground")
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
