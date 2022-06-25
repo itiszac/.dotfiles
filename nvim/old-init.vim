@@ -6,8 +6,6 @@ call plug#begin('~/.local/share/nvim/site/autoload')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'kassio/neoterm'
   Plug 'tpope/vim-commentary'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'neovim/nvim-lspconfig'
@@ -47,17 +45,6 @@ let g:lightline = {
       \ },
       \ 'colorscheme': 'codedark',
       \ }
-
-" junegunn/fzf.vim
-nnoremap <leader><space> :GFiles<CR>
-nnoremap <leader>ff :Rg<CR>
-inoremap <expr> <c-x><c-f> fzf#vim#complete#path(
-      \ "find . -path '*/\.*' -prune -o -print \| sed '1d;s:^..::'",
-      \ fzf#wrap({'dir': expand('%:p:h')}))
-if has('nvim')
-  au! TermOpen * tnoremap <buffer> <Esc> <c-\><c-n>
-  au! FileType fzf tnoremap <buffer> <Esc>
-endif
 
 " tpope/vim-fugitive
 nnoremap <leader>gg :G<CR>

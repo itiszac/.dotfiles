@@ -59,6 +59,10 @@ return packer.startup({function(use)
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
+  use("nvim-telescope/telescope-media-files.nvim")
+
+  -- Treesitter
+  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
@@ -68,7 +72,7 @@ end,
 config = {
   display = {
     open_fn = function()
-      return require("packer.util").float({ border = "single" })
+      return require("packer.util").float({ border = "rounded" })
     end
   }
 }})

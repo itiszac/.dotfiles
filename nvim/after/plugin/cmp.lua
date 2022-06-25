@@ -1,11 +1,11 @@
-local status, cmp = pcall(require, "cmp")
-if not status then
+local status_cmp, cmp = pcall(require, "cmp")
+if not status_cmp then
   vim.notify("[cmp]: cannot find cmp..")
   return
 end
 
-local status, luasnip = pcall(require, "luasnip")
-if not status then
+local status_luasnip, luasnip = pcall(require, "luasnip")
+if not status_luasnip then
   vim.notify("[cmp]: cannot find luasnip..")
   return
 end
@@ -15,21 +15,8 @@ luasnip.config.setup({
   delete_check_events = "TextChanged",
 })
 
-local status, lspkind = pcall(require, "lspkind")
-if not status then
-  vim.notify("[cmp]: cannot find lspkind..")
-  return
-end
-
-require("luasnip/loaders/from_vscode").lazy_load()
-
-local check_bs = function()
-  return
-end
-
-require("luasnip/loaders/from_vscode").lazy_load()
-
-local check_bs = function()
+local status_lspkind, lspkind = pcall(require, "lspkind")
+if not status_lspkind then
   vim.notify("[cmp]: cannot find lspkind..")
   return
 end

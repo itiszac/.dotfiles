@@ -4,18 +4,22 @@ if not status then
   return
 end
 
+telescope.load_extension("media_files")
+
 local actions = require("telescope.actions")
+local sorters = require("telescope.sorters")
+local previewers = require("telescope.previewers")
 
 telescope.setup({
   defaults = {
-    file_sorter = require("telescope.sorters").get_fzy_sorter,
+    file_sorter = sorters.get_fzy_sorter,
     color_devicons = true,
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-    file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-    grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-    qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+    file_previewer = previewers.vim_buffer_cat.new,
+    grep_previewer = previewers.vim_buffer_vimgrep.new,
+    qflist_previewer = previewers.vim_buffer_qflist.new,
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
@@ -92,15 +96,9 @@ telescope.setup({
   },
   extensions = {
     media_files = {
-        -- filetypes whitelist
-        -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-        filetypes = {"png", "webp", "jpg", "jpeg"},
-        find_cmd = "rg" -- find command (defaults to `fd`)
-      }
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+      find_cmd = "rg" -- find command (defaults to `fd`)
+    }
   },
 })
